@@ -1,0 +1,7 @@
+.vscode
+cahce
+node_modules
+test
+.gitattributes
+.gitignore
+jest.config.js
