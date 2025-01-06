@@ -1,43 +1,10 @@
 {
 	"name": "abm-utils",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"description": "The utils from ABM",
 	"main": "dist/index.js",
+	"module": "dist/index.esm.js",
 	"types": "dist/index.d.ts",
-  "exports": {
-    ".": {
-			"require": "./dist/index.js",
-			"types": "./dist/index.d.ts"
-		},
-    "./array": {
-			"require": "./dist/array.js",
-			"types": "./dist/array.d.ts"
-		},
-    "./color": {
-			"require": "./dist/color.js",
-			"types": "./dist/color.d.ts"
-		},
-    "./function": {
-			"require": "./dist/function.js",
-			"types": "./dist/function.d.ts"
-		},
-    "./math": {
-			"require": "./dist/math.js",
-			"types": "./dist/math.d.ts"
-		},
-    "./timer": {
-			"require": "./dist/timer.js",
-			"types": "./dist/timer.d.ts"
-		},
-    "./url": {
-			"require": "./dist/url.js",
-			"types": "./dist/url.d.ts"
-		},
-    "./vector": {
-			"require": "./dist/vector.js",
-			"types": "./dist/vector.d.ts"
-		}
-  },
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/JonnyJong/abm-utils.git"
@@ -49,18 +16,20 @@
 	},
 	"homepage": "https://github.com/JonnyJong/abm-utils#readme",
 	"scripts": {
-		"compile:ts": "tsc",
+		"compile:ts": "rollup -c",
 		"compile": "npm run compile:ts",
 		"test": "jest",
 		"test-coverage": "jest --coverage",
 		"lint": "biome check"
 	},
 	"devDependencies": {
-		"tslib": "^2.7.0",
-		"typescript": "^5.6.2",
+		"@biomejs/biome": "1.9.4",
+		"@rollup/plugin-typescript": "^12.1.2",
 		"@types/jest": "^29.5.13",
 		"jest": "^29.7.0",
+		"rollup": "^4.30.0",
 		"ts-jest": "^29.2.5",
-		"@biomejs/biome": "1.9.4"
+		"tslib": "^2.7.0",
+		"typescript": "^5.6.2"
 	}
 }

@@ -1,11 +1,11 @@
 {
 	"compilerOptions": {
 		// Basic Options
-		"target": "ESNext",
-		"module": "NodeNext",
+		"target": "ES2022",
+		"module": "ES2022",
 		"lib": ["ES2022"],
 		// "types": [],
-		"moduleResolution": "nodenext",
+		"moduleResolution": "bundler",
 		// Type Checking Options
 		"strict": true,
 		"noImplicitAny": true,
