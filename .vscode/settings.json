@@ -1,0 +1,28 @@
+{
+	"typescript.tsdk": "./node_modules/typescript/lib",
+	// Auto Compile
+  "emeraldwalk.runonsave": {
+    "commands": [
+      {
+        "match": "\\.ts$",
+        "cmd": "npm run compile:ts"
+      }
+    ]
+  },
+	// Write
+  "editor.insertSpaces": false,
+  "files.eol": "\n",
+  "[typescript]": {
+    "editor.defaultFormatter": "biomejs.biome",
+		"editor.codeActionsOnSave": {
+			"source.fixAll.biome": "explicit",
+			"source.organizeImports.biome": "explicit"
+		}
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "biomejs.biome",
+  },
+  "[json]": {
+    "editor.defaultFormatter": "biomejs.biome",
+  },
+}

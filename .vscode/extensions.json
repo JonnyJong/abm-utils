@@ -1,0 +1,8 @@
+{
+	"recommendations": [
+		"editorconfig.editorconfig",
+		"emeraldwalk.runonsave",
+		"orta.vscode-jest",
+		"biomejs.biome"
+	]
+}

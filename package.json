@@ -1,0 +1,31 @@
+{
+	"name": "abm-utils",
+	"version": "0.0.1",
+	"description": "The utils from ABM",
+	"main": "dist/index.js",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/JonnyJong/abm-utils.git"
+	},
+	"author": "jonnyjonny",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/JonnyJong/abm-utils/issues"
+	},
+	"homepage": "https://github.com/JonnyJong/abm-utils#readme",
+	"scripts": {
+		"compile:ts": "tsc",
+		"compile": "npm run compile:ts",
+		"test": "jest",
+		"test-coverage": "jest --coverage",
+		"lint": "biome check"
+	},
+	"devDependencies": {
+		"tslib": "^2.7.0",
+		"typescript": "^5.6.2",
+		"@types/jest": "^29.5.13",
+		"jest": "^29.7.0",
+		"ts-jest": "^29.2.5",
+		"@biomejs/biome": "1.9.4"
+	}
+}
