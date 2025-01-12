@@ -5,3 +5,5 @@ export * from './math';
 export * from './timer';
 export * from './url';
 export * from './vector';
+export * from './log';
+export * from './id';
