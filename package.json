@@ -1,10 +1,8 @@
 {
 	"name": "abm-utils",
-	"version": "0.0.5",
+	"version": "0.0.6",
 	"description": "The utils from ABM",
-	"main": "dist/index.js",
-	"module": "dist/index.esm.js",
-	"types": "dist/index.d.ts",
+	"main": "dist/index.ts",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/JonnyJong/abm-utils.git"
