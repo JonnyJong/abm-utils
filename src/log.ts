@@ -13,7 +13,24 @@ export interface Log<Level extends LogLevel = LogLevel> {
 const LEVELS: LogLevel[] = ['debug', 'info', 'warn', 'error', 'fatal'];
 
 class Logging {
-	consoleOuputLevel: LogLevel = 'warn';
+	#consoleOuputLevel = 2;
+	get consoleOuputLevel() {
+		return LEVELS[this.#consoleOuputLevel];
+	}
+	set consoleOuputLevel(value: LogLevel) {
+		const level = LEVELS.indexOf(value);
+		if (level === -1) {
+			this.push({
+				mod: 'abm-utils/log',
+				level: 'warn',
+				time: Date.now(),
+				message: 'Invalid console output level',
+				errObj: new Error('Invalid console output level', { cause: value }),
+			});
+			return;
+		}
+		this.#consoleOuputLevel = level;
+	}
 	logs: Log[] = [];
 	push(log: Log) {
 		if (!LEVELS.includes(log.level)) log.level = 'error';
@@ -33,6 +50,19 @@ class Logging {
 				this.#emit('info', log);
 			case 'debug':
 				this.#emit('debug', log);
+		}
+		const level = LEVELS.indexOf(log.level);
+		if (level < this.#consoleOuputLevel) return;
+		switch (level) {
+			case 4:
+			case 3:
+				console.error(log);
+				return;
+			case 2:
+				console.warn(log);
+				return;
+			default:
+				console.log(log);
 		}
 	}
 	#subscriptions: {
