@@ -1,3 +1,6 @@
+> [!IMPORTANT]
+> Deprecated, please go to [JonnyJong/adm-kits](https://github.com/JonnyJong/adm-kits)
+
 # abm-utils
 **Important: the abm-utils library is not stable yet**
 
